@@ -31,7 +31,7 @@ function runModule(relativeModulePath, args) {
 }
 
 describe('command line', function () {
-    it('writes output', async function () {
+    it('returns arguments', async function () {
         const args = ["arg1", "arg2"];
         const stdout = await runModule("./_command_line_test_args_runner.js", args);
         assert.equal(stdout, '["arg1","arg2"]');

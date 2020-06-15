@@ -1,9 +1,15 @@
 'use strict';
 
-exports.writeOutput = function (text) {
-    console.log(text);
-};
+module.exports = class CommandLine {
+    static create() {
+        return new CommandLine();
+    }
 
-exports.args = function () {
-    return process.argv.slice(2);
+    writeOutput(text) {
+        console.log(text);
+    }
+
+    args() {
+        return process.argv.slice(2);
+    }
 };

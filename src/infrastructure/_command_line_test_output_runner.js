@@ -1,5 +1,5 @@
 'use strict';
 
-const commandLine = require('./command_line');
+const CommandLine = require('./command_line');
 
-commandLine.writeOutput("my output");
+CommandLine.create().writeOutput("my output");

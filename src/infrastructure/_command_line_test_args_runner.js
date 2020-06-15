@@ -1,7 +1,7 @@
 'use strict';
 
-const commandLine = require('./command_line');
+const CommandLine = require('./command_line');
 
-const args = commandLine.args();
+const args = CommandLine.create().args();
 
 process.stdout.write(JSON.stringify(args));
