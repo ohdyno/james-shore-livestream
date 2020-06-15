@@ -20,7 +20,13 @@ function transform(char) {
     return char;
 }
 
-exports.transform = function (input) {
-    if (typeof input !== "string") throw new Error("Expect input to be a string");
-    return [...input].map(transform).join('');
+module.exports = class Rot13 {
+    static create() {
+        return new Rot13();
+    }
+
+    transform(input) {
+        if (typeof input !== "string") throw new Error("Expect input to be a string");
+        return [...input].map(transform).join('');
+    }
 };
